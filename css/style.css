@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  background-color: #e5eff5;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'top top'
+    'left right';
+  margin: 24px auto;
+  top: 50%;
+  width: 50%;
+  box-shadow: 14px 10px 18px 10px rgba(0, 0, 0, 0.03);
+  transition: 0.5s ease-in;
+}
+
+.top {
+  grid-area: top;
+  background-color: #fff;
+  padding: 48px;
+  border-radius: 10px 10px 0 0;
+}
+
+.title-top {
+  margin-bottom: 12px;
+  color: #2ab2af;
+}
+
+.sub-title {
+  margin-bottom: 8px;
+  color: #c0df34;
+}
+
+.text {
+  color: #a8a8a8;
+}
+
+.left,
+.right {
+  color: #fff;
+  padding: 48px;
+}
+
+.title-bottom {
+  margin-bottom: 32px;
+}
+
+.left {
+  grid-area: left;
+  background-color: #2ab2af;
+  border-radius: 0 0 0 10px;
+}
+
+.price-lg {
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.price-lg span {
+  font-weight: 700;
+  font-size: 32px;
+  margin-right: 12px;
+}
+
+.price-sm {
+  margin-bottom: 56px;
+  font-weight: 400;
+}
+
+.btn {
+  padding: 12px 106px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background-color: #c0df34;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: 0.5s ease-in;
+}
+
+.btn:hover {
+  color: #2ab2af;
+  background-color: #fff;
+}
+
+.right {
+  grid-area: right;
+  background-color: rgba(42, 178, 175, 0.8);
+  border-radius: 0 0 10px 0;
+}
+
+.features {
+  list-style-type: none;
+  font-weight: 400;
+}
+
+.features li {
+  margin: 6px 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 375px) {
+  .container {
+    grid-template-areas:
+      'top'
+      'left'
+      'right';
+    width: 90%;
+  }
+
+  .left {
+    border-radius: 0;
+  }
+
+  .right {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .btn {
+    padding: 12px 90px;
+  }
+}
